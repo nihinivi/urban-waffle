@@ -1,0 +1,40 @@
+{
+  "name": "ScalpEmpireBackend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node ./dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+    "debug": "tsc && node --inspect ./dist/src/app.js",
+    "postinstall": "tsc",
+    "deploy": "git add . && git commit -m Heroku && git push heroku master"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@project-serum/anchor": "^0.14.0",
+    "@solana/web3.js": "^1.29.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "https": "^1.0.0",
+    "moment": "^2.29.1",
+    "mysql": "^2.18.1",
+    "node-cron": "3.0.0",
+    "node-fetch": "^2.0.0",
+    "request": "^2.88.2",
+    "stream-json": "^1.7.3",
+    "typescript": "^4.5.4"
+  },
+  "engines": {
+    "node": "16.8.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.4.0",
+    "ts-node-dev": "^1.1.8"
+  }
+}
